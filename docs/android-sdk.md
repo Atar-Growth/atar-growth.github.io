@@ -16,7 +16,7 @@ The Atar SDK is distributed as an AAR file. You can follow these instructions to
 
 ### 2.1 Download the AAR
 
-Download the Atar Android SDK AAR file from here: [https://postintent-hosting.s3.amazonaws.com/atar-sdk-1.0.1.aar](https://postintent-hosting.s3.amazonaws.com/atar-sdk-1.0.1.aar)
+Download the Atar Android SDK AAR file from here: [https://host.atargrowth.com/public/atar-sdk-1.0.1.aar](https://host.atargrowth.com/public/atar-sdk-1.0.1.aar)
 
 ### 2.2 Add the AAR to your project
 
