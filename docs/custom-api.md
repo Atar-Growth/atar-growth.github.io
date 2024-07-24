@@ -262,8 +262,7 @@ The contents of the Offer object returned from the API call can be used to show 
 | title          | String  | Title of the offer                   |
 | description    | String  | Description of the offer             |
 | cta            | String  | Call to action button text           |
-| iconUrl        | String? | URL to the offer's icon image        |
-| type           | String  | Type of the offer                    |
+| iconUrl        | String  | URL to the offer's icon image        |
 | clickUrl       | String  | URL to handle click actions          |
 | destinationUrl | String  | URL where the user is redirected     |
 
