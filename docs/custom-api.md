@@ -23,8 +23,8 @@ In order to retrieve an offer, you need to build a request object. The request o
 | Req  | event       | User event that preceded the offers            | string    |
 | Req  | referenceId | Some ID for reference for deduplication.       | string    |
 | Req  | userId      | Some ID for the user.                          | string    |
-| Rec  | email       | User email.                                    | string    |
-| Rec  | phone       | User phone number.                             | string    |
+| Req  | email       | User email.                                    | string    |
+| Req  | phone       | User phone number.                             | string    |
 | Rec  | gender      | User gender: M/F                               | string    |
 | Rec  | dob         | Date of birth, YYYYMMDD                        | string    |
 | Rec  | firstName   | User first name                                | string    |
@@ -81,6 +81,7 @@ The post body includes important information for reporting segmentation and targ
 | aV          | App version                                    | string    |
 | aId         | Some user ID for the app                       | string    |
 | os          | Operating system (ios or android)              | string    |
+| type        | Some string tag for your ad layout             | string    |
 | platform    | Platform (phone, tablet, web, etc.)            | string    |
 | ip          | The user IP, optional for client side calls    | string    |
 | count       | The number of offers you want to display       | string    |
@@ -95,6 +96,7 @@ Here are some examples of building the minimum request object in different langu
     body["aV"] = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "unknown"
     body["aId"] = "userId1234"
     body["os"] = "ios"
+    body["type"] = "interstitial"
     body["platform"] = "phone"
     body["request"] = dict
     ```
@@ -106,6 +108,7 @@ Here are some examples of building the minimum request object in different langu
     body[@"aV"] = [[NSBundle mainBundle] infoDictionary][@"CFBundleShortVersionString"] ?: @"unknown";
     body[@"aId"] = @"userId1234";
     body[@"os"] = @"ios";
+    body[@"type"] = @"interstitial";
     body[@"platform"] = @"phone";
     body[@"request"] = dict;
     ```
@@ -118,6 +121,7 @@ Here are some examples of building the minimum request object in different langu
     body["aId"] = "userId1234"
     body["os"] = "android"
     body["platform"] = "phone"
+    body["type"] = "interstitial"
     body["request"] = dict
     ```
 
@@ -129,6 +133,7 @@ Here are some examples of building the minimum request object in different langu
     body.put("aId", "userId1234");
     body.put("os", "android");
     body.put("platform", "phone");
+    body.put("type", "interstitial");
     body.put("request", dict);
     ```
     

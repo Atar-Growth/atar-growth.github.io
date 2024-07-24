@@ -558,13 +558,13 @@
 <td>string</td>
 </tr>
 <tr>
-<td>Rec</td>
+<td>Req</td>
 <td>email</td>
 <td>User email.</td>
 <td>string</td>
 </tr>
 <tr>
-<td>Rec</td>
+<td>Req</td>
 <td>phone</td>
 <td>User phone number.</td>
 <td>string</td>
@@ -708,6 +708,11 @@
 <td>string</td>
 </tr>
 <tr>
+<td>type</td>
+<td>Some string tag for your ad layout</td>
+<td>string</td>
+</tr>
+<tr>
 <td>platform</td>
 <td>Platform (phone, tablet, web, etc.)</td>
 <td>string</td>
@@ -738,8 +743,9 @@
 </span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="n">body</span><span class="p">[</span><span class="s">&quot;aV&quot;</span><span class="p">]</span> <span class="p">=</span> <span class="n">Bundle</span><span class="p">.</span><span class="n">main</span><span class="p">.</span><span class="n">infoDictionary</span><span class="p">?[</span><span class="s">&quot;CFBundleShortVersionString&quot;</span><span class="p">]</span> <span class="k">as</span><span class="p">?</span> <span class="nb">String</span> <span class="p">??</span> <span class="s">&quot;unknown&quot;</span>
 </span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="n">body</span><span class="p">[</span><span class="s">&quot;aId&quot;</span><span class="p">]</span> <span class="p">=</span> <span class="s">&quot;userId1234&quot;</span>
 </span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="n">body</span><span class="p">[</span><span class="s">&quot;os&quot;</span><span class="p">]</span> <span class="p">=</span> <span class="s">&quot;ios&quot;</span>
-</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="n">body</span><span class="p">[</span><span class="s">&quot;platform&quot;</span><span class="p">]</span> <span class="p">=</span> <span class="s">&quot;phone&quot;</span>
-</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="n">body</span><span class="p">[</span><span class="s">&quot;request&quot;</span><span class="p">]</span> <span class="p">=</span> <span class="n">dict</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="n">body</span><span class="p">[</span><span class="s">&quot;type&quot;</span><span class="p">]</span> <span class="p">=</span> <span class="s">&quot;interstitial&quot;</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="n">body</span><span class="p">[</span><span class="s">&quot;platform&quot;</span><span class="p">]</span> <span class="p">=</span> <span class="s">&quot;phone&quot;</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="n">body</span><span class="p">[</span><span class="s">&quot;request&quot;</span><span class="p">]</span> <span class="p">=</span> <span class="n">dict</span>
 </span></code></pre></div>
 </div>
 <div class="tabbed-block">
@@ -748,8 +754,9 @@
 </span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="n">body</span><span class="p">[</span><span class="s">@&quot;aV&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[[</span><span class="bp">NSBundle</span><span class="w"> </span><span class="n">mainBundle</span><span class="p">]</span><span class="w"> </span><span class="n">infoDictionary</span><span class="p">][</span><span class="s">@&quot;CFBundleShortVersionString&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">?:</span><span class="w"> </span><span class="s">@&quot;unknown&quot;</span><span class="p">;</span>
 </span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="n">body</span><span class="p">[</span><span class="s">@&quot;aId&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">@&quot;userId1234&quot;</span><span class="p">;</span>
 </span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="n">body</span><span class="p">[</span><span class="s">@&quot;os&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">@&quot;ios&quot;</span><span class="p">;</span>
-</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="n">body</span><span class="p">[</span><span class="s">@&quot;platform&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">@&quot;phone&quot;</span><span class="p">;</span>
-</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="n">body</span><span class="p">[</span><span class="s">@&quot;request&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dict</span><span class="p">;</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="n">body</span><span class="p">[</span><span class="s">@&quot;type&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">@&quot;interstitial&quot;</span><span class="p">;</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="n">body</span><span class="p">[</span><span class="s">@&quot;platform&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">@&quot;phone&quot;</span><span class="p">;</span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="n">body</span><span class="p">[</span><span class="s">@&quot;request&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dict</span><span class="p">;</span>
 </span></code></pre></div>
 </div>
 <div class="tabbed-block">
@@ -759,7 +766,8 @@
 </span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="n">body</span><span class="o">[</span><span class="s">&quot;aId&quot;</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;userId1234&quot;</span>
 </span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="n">body</span><span class="o">[</span><span class="s">&quot;os&quot;</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;android&quot;</span>
 </span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="n">body</span><span class="o">[</span><span class="s">&quot;platform&quot;</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;phone&quot;</span>
-</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="n">body</span><span class="o">[</span><span class="s">&quot;request&quot;</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dict</span>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="n">body</span><span class="o">[</span><span class="s">&quot;type&quot;</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;interstitial&quot;</span>
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="n">body</span><span class="o">[</span><span class="s">&quot;request&quot;</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dict</span>
 </span></code></pre></div>
 </div>
 <div class="tabbed-block">
@@ -769,7 +777,8 @@
 </span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="n">body</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;aId&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;userId1234&quot;</span><span class="p">);</span>
 </span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="n">body</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;os&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;android&quot;</span><span class="p">);</span>
 </span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="n">body</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;platform&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;phone&quot;</span><span class="p">);</span>
-</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="n">body</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;request&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">dict</span><span class="p">);</span>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="n">body</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;type&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;interstitial&quot;</span><span class="p">);</span>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="n">body</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;request&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">dict</span><span class="p">);</span>
 </span></code></pre></div>
 </div>
 </div>

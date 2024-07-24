@@ -24,6 +24,7 @@ https://api.atargrowth.com/offers
     &   aV=<the app version>
     &   os=<ios or android>
     &   platform=<phone, tablet, web, etc.>
+    &   type=<interstitial, banner, etc.>
 
 # User and event specific parameters
     &   userId=<the user ID>
@@ -42,6 +43,7 @@ Here are some examples of constructing the URL in different languages:
         URLQueryItem(name: "aV", value: Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? ""),
         URLQueryItem(name: "os", value: "ios"),
         URLQueryItem(name: "platform", value: UIDevice.current.model),
+        URLQueryItem(name: "type", value: "interstitial"),
         URLQueryItem(name: "userId", value: "userId1234"),
         URLQueryItem(name: "referenceId", value: "12345"),
         URLQueryItem(name: "event", value: "purchase")
@@ -59,6 +61,7 @@ Here are some examples of constructing the URL in different languages:
         [NSURLQueryItem queryItemWithName:@"aV" value:[[NSBundle mainBundle] infoDictionary][@"CFBundleShortVersionString"] ?: @""],
         [NSURLQueryItem queryItemWithName:@"os" value:@"ios"],
         [NSURLQueryItem queryItemWithName:@"platform" value:[UIDevice currentDevice].model],
+        [NSURLQueryItem queryItemWithName:@"type" value:@"interstitial"],
         [NSURLQueryItem queryItemWithName:@"userId" value:@"userId1234"],
         [NSURLQueryItem queryItemWithName:@"referenceId" value:@"12345"],
         [NSURLQueryItem queryItemWithName:@"event" value:@"purchase"]
@@ -75,6 +78,7 @@ Here are some examples of constructing the URL in different languages:
         .appendQueryParameter("aV", context.packageManager.getPackageInfo(context.packageName, 0).versionName)
         .appendQueryParameter("os", "android")
         .appendQueryParameter("platform", "phone")
+        .appendQueryParameter("type", "interstitial")
         .appendQueryParameter("userId", "userId1234")
         .appendQueryParameter("referenceId", "12345")
         .appendQueryParameter("event", "purchase")
@@ -90,6 +94,7 @@ Here are some examples of constructing the URL in different languages:
         .appendQueryParameter("aV", context.getPackageManager().getPackageInfo(context.getPackageName(), 0).versionName)
         .appendQueryParameter("os", "android")
         .appendQueryParameter("platform", "phone")
+        .appendQueryParameter("type", "interstitial")
         .appendQueryParameter("userId", "userId1234")
         .appendQueryParameter("referenceId", "12345")
         .appendQueryParameter("event", "purchase");
