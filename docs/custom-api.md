@@ -123,7 +123,7 @@ Here are some examples of building the minimum request object in different langu
 
 === "Java"
     ```java
-    Map<String, Object> body = new HashMap<>();
+    JSONObject body = new JSONObject();
     body.put("bId", context.getPackageName());
     body.put("aV", context.getPackageManager().getPackageInfo(context.getPackageName(), 0).versionName);
     body.put("aId", "userId1234");
@@ -261,6 +261,7 @@ The contents of the Offer object returned from the API call can be used to show 
 | id             | String  | Unique identifier for the offer      |
 | title          | String  | Title of the offer                   |
 | description    | String  | Description of the offer             |
+| cta            | String  | Call to action button text           |
 | iconUrl        | String? | URL to the offer's icon image        |
 | type           | String  | Type of the offer                    |
 | clickUrl       | String  | URL to handle click actions          |
