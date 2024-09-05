@@ -16,7 +16,7 @@ The Atar SDK is distributed as an AAR file. You can follow these instructions to
 
 ### 2.1 Download the AAR
 
-Download the Atar Android SDK AAR file from here: [https://host.atargrowth.com/public/atar-sdk-1.0.1.aar](https://host.atargrowth.com/public/atar-sdk-1.0.1.aar)
+Download the Atar Android SDK AAR file from here: [https://host.atargrowth.com/public/atar-sdk-1.1.0.aar](https://host.atargrowth.com/public/atar-sdk-1.1.0.aar)
 
 ### 2.2 Add the AAR to your project
 
@@ -24,7 +24,7 @@ Place the Atar SDK in the `libs` folder of your Android project. If you don’t 
 
 ```bash
 project-folder/src/main/java/com/example/project/MainActivity.java
-project-folder/libs/atar-sdk-1.0.1.aar
+project-folder/libs/atar-sdk-1.1.0.aar
 ```
 
 ### 2.3 Add the AAR to your build.gradle
@@ -33,7 +33,7 @@ Open your app's build.gradle file and add the following line to the dependencies
 
 ```groovy
 dependencies {
-    implementation files('libs/atar-sdk-1.0.1.aar')
+    implementation files('libs/atar-sdk-1.1.0.aar')
 }
 ```
 
@@ -41,7 +41,7 @@ or in other Gradle versions:
 
 ```groovy
 dependencies {
-  implementation(files('libs/atar-sdk-1.0.1.aar'))
+  implementation(files('libs/atar-sdk-1.1.0.aar'))
 }
 ```
 
