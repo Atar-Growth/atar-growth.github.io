@@ -202,27 +202,33 @@ Here are some examples of making the API call in different languages:
 === "Kotlin"
     ```kotlin
     Thread({
-        val url = URL("https://api.atargrowth.com/offers")
-        val connection = url.openConnection() as HttpURLConnection
-        connection.requestMethod = "POST"
-        connection.setRequestProperty("Content-Type", "application/json")
-        connection.setRequestProperty("Authorization", "Bearer YOUR_APP_KEY")
-        connection.doOutput = true
-        val output = DataOutputStream(connection.outputStream)
-        output.writeBytes(body.toString())
-        output.flush()
-        output.close()
-        val responseCode = connection.responseCode
-        val response = connection.inputStream.bufferedReader().use { it.readText() }
+        try {
+            val url = URL("https://api.atargrowth.com/offers")
+            val connection = url.openConnection() as HttpURLConnection
+            connection.requestMethod = "POST"
+            connection.setRequestProperty("Content-Type", "application/json")
+            connection.setRequestProperty("Authorization", "Bearer YOUR_APP_KEY")
+            connection.doOutput = true
+            val output = DataOutputStream(connection.outputStream)
+            output.writeBytes(body.toString())
+            output.flush()
+            output.close()
+            val responseCode = connection.responseCode
+            val response = connection.inputStream.bufferedReader().use { it.readText() }
 
-        val dict = JSONObject(response)
-        println("Offer dict: $dict")
+            val dict = JSONObject(response)
+            println("Offer dict: $dict")
 
-        if (dict.getString("success") == "false") {
-            val errorMessage = dict.getString("message") ?: "Unknown error"
-            println("Error fetching offer: $errorMessage")
-        } else {
-            val offer = dict.getJSONObject("offers")
+            if (dict.getString("success") == "false") {
+                val errorMessage = dict.getString("message") ?: "Unknown error"
+                println("Error fetching offer: $errorMessage")
+            } else {
+                val offers = dict.getJSONArray("offers")
+                println("Offers: $offers")
+            }
+        } catch (Exception e) {
+            e.printStackTrace()
+            Log.e("AtarTestBed", "Error fetching offer: " + e.toString())
         }
     }).start()
     ```
@@ -252,14 +258,22 @@ Here are some examples of making the API call in different languages:
                 reader.close();
 
                 JSONObject dict = new JSONObject(response.toString());
-                System.out.println("Offer dict: " + dict);
+                Log.i("AtarTestBed", "Offer dict: " + dict);
                 
-                if (dict.getString("success").equals("false")) {
-                    String errorMessage = dict.getString("message") != null ? dict.getString("message") : "Unknown error";
-                    System.out.println("Error fetching offer: " + errorMessage);
+               if (resp.getString("success").equals("false")) {
+                    String errorMessage = resp.getString("message") != null ? resp.getString("message") : "Unknown error";
+                    Log.e("AtarTestBed","Error fetching offer: " + errorMessage);
                 } else {
-                    JSONObject offer = dict.getJSONObject("offers");
+                    JSONArray offers = resp.getJSONArray("offers");
+                    for (int i = 0; i < offers.length(); i++) {
+                        JSONObject offer = offers.getJSONObject(i);
+                        Log.i("AtarTestBed", "Offer: " + offer.toString());
+                    }
                 }
+            } catch (Exception e) {
+                e.printStackTrace();
+                Log.e("AtarTestBed", "Error fetching offer: " + e.toString());
+            }
     }).start();
     ```
 
