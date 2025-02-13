@@ -42,33 +42,33 @@ Here are some examples of building the minimum request object in different langu
 
 === "Swift"
     ```swift
-    var dict = [String: Any]()
-    dict["event"] = "purchase"
-    dict["referenceId"] = "12345"
-    dict["userId"] = "userId1234"
+    var req = [String: Any]()
+    req["event"] = "purchase"
+    req["referenceId"] = "12345"
+    req["userId"] = "userId1234"
     ```
 === "Objective C"
     ```objc
-    NSMutableDictionary *dict = [NSMutableDictionary new];
-    dict[@"event"] = @"purchase";
-    dict[@"referenceId"] = @"12345";
-    dict[@"userId"] = @"userId1234";
+    NSMutableDictionary *req = [NSMutableDictionary new];
+    req[@"event"] = @"purchase";
+    req[@"referenceId"] = @"12345";
+    req[@"userId"] = @"userId1234";
     ```
 
 === "Kotlin"
     ```kotlin
-    val dict = mutableMapOf<String, Any>()
-    dict["event"] = "purchase"
-    dict["referenceId"] = "12345"
-    dict["userId"] = "userId1234"
+    val req = mutableMapOf<String, Any>()
+    req["event"] = "purchase"
+    req["referenceId"] = "12345"
+    req["userId"] = "userId1234"
     ```
 
 === "Java"
     ```java
-    Map<String, Object> dict = new HashMap<>();
-    dict.put("event", "purchase");
-    dict.put("referenceId", "12345");
-    dict.put("userId", "userId1234");
+    Map<String, Object> req = new HashMap<>();
+    req.put("event", "purchase");
+    req.put("referenceId", "12345");
+    req.put("userId", "userId1234");
     ```
 
 ### 2.2 Prepare the API body to POST
@@ -98,7 +98,7 @@ Here are some examples of building the minimum request object in different langu
     body["os"] = "ios"
     body["type"] = "interstitial"
     body["platform"] = "phone"
-    body["request"] = dict
+    body["request"] = req
     ```
 
 === "Objective C"
@@ -110,7 +110,7 @@ Here are some examples of building the minimum request object in different langu
     body[@"os"] = @"ios";
     body[@"type"] = @"interstitial";
     body[@"platform"] = @"phone";
-    body[@"request"] = dict;
+    body[@"request"] = req;
     ```
 
 === "Kotlin"
@@ -122,7 +122,7 @@ Here are some examples of building the minimum request object in different langu
     body["os"] = "android"
     body["platform"] = "phone"
     body["type"] = "interstitial"
-    body["request"] = dict
+    body["request"] = req
     ```
 
 === "Java"
@@ -134,7 +134,7 @@ Here are some examples of building the minimum request object in different langu
     body.put("os", "android");
     body.put("platform", "phone");
     body.put("type", "interstitial");
-    body.put("request", dict);
+    body.put("request", req);
     ```
     
 ### 2.3 Make the API call and handle response
@@ -164,8 +164,8 @@ Here are some examples of making the API call in different languages:
             print("Error fetching offer: \(errorMessage)")
             return
         } else {
-            if dict["offer"] != nil {
-                let offer = dict["offer"] as? [String: Any] ?? [:]
+            if dict["offers"] != nil {
+                let offer = dict["offers"] as? [String: Any] ?? [:]
             } else {
                 return
             }
@@ -193,7 +193,7 @@ Here are some examples of making the API call in different languages:
             NSLog(@"Error fetching offer: %@", errorMessage);
             return;
         } else {
-            NSDictionary *offer = dict[@"offer"] ?: @{};
+            NSDictionary *offer = dict[@"offers"] ?: @{};
         }
     }];
     [task resume];
@@ -201,60 +201,66 @@ Here are some examples of making the API call in different languages:
 
 === "Kotlin"
     ```kotlin
-    val url = URL("https://api.atargrowth.com/offers")
-    val connection = url.openConnection() as HttpURLConnection
-    connection.requestMethod = "POST"
-    connection.setRequestProperty("Content-Type", "application/json")
-    connection.setRequestProperty("Authorization", "Bearer YOUR_APP_KEY")
-    connection.doOutput = true
-    val output = DataOutputStream(connection.outputStream)
-    output.writeBytes(body.toString())
-    output.flush()
-    output.close()
-    val responseCode = connection.responseCode
-    val response = connection.inputStream.bufferedReader().use { it.readText() }
+    Thread({
+        val url = URL("https://api.atargrowth.com/offers")
+        val connection = url.openConnection() as HttpURLConnection
+        connection.requestMethod = "POST"
+        connection.setRequestProperty("Content-Type", "application/json")
+        connection.setRequestProperty("Authorization", "Bearer YOUR_APP_KEY")
+        connection.doOutput = true
+        val output = DataOutputStream(connection.outputStream)
+        output.writeBytes(body.toString())
+        output.flush()
+        output.close()
+        val responseCode = connection.responseCode
+        val response = connection.inputStream.bufferedReader().use { it.readText() }
 
-    val dict = JSONObject(response)
-    println("Offer dict: $dict")
+        val dict = JSONObject(response)
+        println("Offer dict: $dict")
 
-    if (dict.getString("success") == "false") {
-        val errorMessage = dict.getString("message") ?: "Unknown error"
-        println("Error fetching offer: $errorMessage")
-    } else {
-        val offer = dict.getJSONObject("offer")
-    }
+        if (dict.getString("success") == "false") {
+            val errorMessage = dict.getString("message") ?: "Unknown error"
+            println("Error fetching offer: $errorMessage")
+        } else {
+            val offer = dict.getJSONObject("offers")
+        }
+    }).start()
     ```
     
 === "Java"
     ```java
-    URL url = new URL("https://api.atargrowth.com/offers");
-    HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-    connection.setRequestMethod("POST");
-    connection.setRequestProperty("Content-Type", "application/json");
-    connection.setRequestProperty("Authorization", "Bearer YOUR_APP_KEY");
-    connection.setDoOutput(true);
-    DataOutputStream output = new DataOutputStream(connection.getOutputStream());
-    output.writeBytes(body.toString());
-    output.flush();
-    output.close();
-    int responseCode = connection.getResponseCode();
-    BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
-    String line;
-    StringBuffer response = new StringBuffer();
-    while ((line = reader.readLine()) != null) {
-        response.append(line);
-    }
-    reader.close();
+    new Thread(() -> {
+            try {
+                URL url = new URL("https://api.atargrowth.com/offers");
+                HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+                connection.setRequestMethod("POST");
+                connection.setRequestProperty("Content-Type", "application/json");
+                connection.setRequestProperty("Authorization", "Bearer YOUR_APP_KEY");
+                connection.setDoOutput(true);
+                DataOutputStream output = new DataOutputStream(connection.getOutputStream());
+                output.writeBytes(body.toString());
+                output.flush();
+                output.close();
 
-    JSONObject dict = new JSONObject(response.toString());
-    System.out.println("Offer dict: " + dict);
-    
-    if (dict.getString("success").equals("false")) {
-        String errorMessage = dict.getString("message") != null ? dict.getString("message") : "Unknown error";
-        System.out.println("Error fetching offer: " + errorMessage);
-    } else {
-        JSONObject offer = dict.getJSONObject("offer");
-    }
+                int responseCode = connection.getResponseCode();
+                BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
+                String line;
+                StringBuffer response = new StringBuffer();
+                while ((line = reader.readLine()) != null) {
+                    response.append(line);
+                }
+                reader.close();
+
+                JSONObject dict = new JSONObject(response.toString());
+                System.out.println("Offer dict: " + dict);
+                
+                if (dict.getString("success").equals("false")) {
+                    String errorMessage = dict.getString("message") != null ? dict.getString("message") : "Unknown error";
+                    System.out.println("Error fetching offer: " + errorMessage);
+                } else {
+                    JSONObject offer = dict.getJSONObject("offers");
+                }
+    }).start();
     ```
 
 ## Step 3: Show the offer to the user
