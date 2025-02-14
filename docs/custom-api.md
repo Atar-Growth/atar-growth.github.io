@@ -228,7 +228,7 @@ Here are some examples of making the API call in different languages:
             }
         } catch (Exception e) {
             e.printStackTrace()
-            Log.e("AtarTestBed", "Error fetching offer: " + e.toString())
+            println("Error fetching offer: ${e.toString()}")
         }
     }).start()
     ```
