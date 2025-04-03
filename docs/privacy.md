@@ -6,11 +6,24 @@ This Privacy Policy applies to all users of Atar Growth services accessed throug
 
 ## Atar Services
 
-Atar Growth provides services to companies ("Partners") that allow you to receive offers, promotions, coupons, discounts, app download invitations, and calendar subscription invitations, and to interact with other marketing services (including during or after a transaction) (collectively, "Offers") from third-party advertisers ("Advertisers"), displayed on Atar Sites.
+Atar Growth provides services to companies ("Partners") that allow you to receive offers, promotions, coupons, discounts, app download invitations, and calendar subscription invitations, and to interact with other marketing services (including during or after a transaction) (collectively, "Offers") from third-party advertisers ("Advertisers"), displayed on Atar Sites. Additionally, Atar Growth provides a service called "Gravy Pass" that allows users to earn real cash through engaging with qualifying Offers.
 
 ## Your Choices and Their Implications
 
 There is no obligation for you to sign up to Offers. If you choose to engage with any Offers, we may share your Personal Information, where applicable, with the party identified in the Offer, enabling them to fulfill the Offers and provide you with further information related to such Offers, as elaborated below under 'Collection and Use of Personal Information'. Importantly, there are no negative consequences if you choose not to sign up to an Offer, nor will it prevent you from accessing future services from that company—no further action will be taken regarding that Offer.
+
+## SMS Messaging and Consent
+
+Atar Growth may offer the ability to receive SMS messages from us at the phone number (866) 377-1970. If you choose to opt in to SMS communications:
+
+- You provide your express written consent to receive promotional, transactional, and informational text messages from Atar Growth.
+- Message frequency may vary depending on your activity and engagement with our services.
+- Standard message and data rates may apply.
+- You acknowledge that consent is not a condition of purchasing any goods or services.
+- You can opt out at any time by texting STOP to (866) 377-1970 or by contacting privacy@atargrowth.com.
+- For help, text HELP to (866) 377-1970 or contact support@atargrowth.com.
+
+Your consent to receive SMS messages is separate from any other consents you may have provided. We will never automatically opt you into SMS messaging - this requires your explicit action and consent through our opt-in process. You will have the opportunity to confirm your phone number and consent before receiving marketing messages.
 
 ## Commitment to Your Privacy
 
@@ -34,13 +47,14 @@ We collect and process various categories of Personal Information based on the l
 
 | Category | Description |
 |---|---|
-| Information Provided by You | When you engage with us or sign up for Offers across Atar Sites (e.g., name, email address). |
+| Information Provided by You | When you engage with us or sign up for Offers across Atar Sites (e.g., name, email address, phone number for SMS communications). |
 | Customer Contact Channels | Information you provide through various customer contact channels (e.g., name, email, phone number). |
 | Information from Advertisers and Partners | Identifying details provided by Advertisers and Partners as part of our services to them (e.g., email, gender, age, postcode). |
 | Usage Data | Data about your interactions with Atar Sites or Offers, including Offer interaction data, device information, and website analytics. |
 | Automatically Collected Information | Information obtained using tracking technologies like cookies, pixels, and web beacons that tell us how you interact with our services. |
 | Information for Business Engagements | If you engage with Atar on behalf of your business, we collect information necessary to manage the relationship. |
 | Third-Party Sources | Information from third-party sources to supplement data collected, such as data validation services or social networking sites. |
+| Gravy Pass Information | For Gravy Pass users, information necessary to process rewards, including payment details and offer engagement history. |
 
 ### Our Basis for Processing
 
@@ -82,12 +96,14 @@ We use your Personal Information for the following purposes:
 - Information validation and identity verification: We validate the information you provide and verify identities, particularly in relation to privacy requests.
 - Protection of rights and safety: We use your information to protect the rights, property, or safety of our users, employees, or third parties, including Partners and Advertisers.
 - Business-to-business interactions: When you engage with us on behalf of your business or employer, we use your Personal Information to manage and administer our relationship, including record-keeping, payments, communication, tracking outcomes, and verifying your eligibility and suitability.
+- Gravy Pass administration: For users of our Gravy Pass service, we use your information to track offer engagement, calculate earnings, process payments, and manage your account.
+- SMS communications: If you have expressly opted in to receive SMS communications, we use your phone number to send you messages as described in the SMS Messaging and Consent section.
 
 We may specify additional purposes for collecting your Personal Information at the time of collection.
 
 ### (ii) Sharing Personal Information with Partners and Advertisers
 
-- Engaging with Offers: When you interact with Offers on a Partner’s site, by actions such as swiping or clicking, we share the Personal Information you provide and information related to the Offer with the Partner.
+- Engaging with Offers: When you interact with Offers on a Partner's site, by actions such as swiping or clicking, we share the Personal Information you provide and information related to the Offer with the Partner.
 - Accepting Advertiser Offers: If you accept Offers from Advertisers, we share your Personal Information, including details like your email address, segmentation data (e.g., gender, age/DOB, postcode, title, phone number), and other third-party provided data, with the Advertisers, even if such information is not directly displayed.
 
 #### Examples of Personal Information Shared Based on Offer Engagement:
@@ -96,7 +112,7 @@ We may specify additional purposes for collecting your Personal Information at t
 |-------------------|-----------------------------|
 | Receiving information via email or CRM sign-up | Email, name, gender, location details, age/DOB, device and browser info, transaction details |
 | Receiving a call from an Advertiser | Phone number, email, name, gender, location details, age/DOB, device and browser info, transaction details |
-| Visiting an Advertiser’s website | Email, name, gender, location details, age (for pre-populating forms) |
+| Visiting an Advertiser's website | Email, name, gender, location details, age (for pre-populating forms) |
 | Signing up for a calendar event or app download | Pseudonymized details like hashed email for tracking and custom audience purposes |
 | Other Offer types | Data consistent with the Offer nature, similar to above details |
 
@@ -232,7 +248,16 @@ Please send an email to privacy@atargrowth.com with the subject "Opt Out". We wi
 
 ### Opting Out from Partner Offers:
 
-Opting out from third-party Advertiser Offers does not affect offers from Partners that are native to the Partner’s site. You cannot opt out from seeing first-party Partner Offers that are part of the native experience on their sites.
+Opting out from third-party Advertiser Offers does not affect offers from Partners that are native to the Partner's site. You cannot opt out from seeing first-party Partner Offers that are part of the native experience on their sites.
+
+### Opting Out of SMS Messages:
+
+If you have opted in to receiving SMS messages from Atar Growth, you can opt out at any time by:
+- Texting STOP to (866) 377-1970
+- Emailing privacy@atargrowth.com with the subject line "SMS Opt Out" and including the phone number you wish to opt out
+- Contacting our customer support team
+
+Once you opt out, you will receive a confirmation message, and we will no longer send you SMS messages. Please note that if you have subscribed to SMS messages from multiple Atar Growth services or campaigns, you may need to opt out of each separately by following the specific opt-out instructions provided in each campaign.
 
 ## California Privacy Rights
 
@@ -285,7 +310,7 @@ Under California privacy law definitions, we may "sell" or "share":
 
 We commit to using or disclosing sensitive Personal Information only for purposes explicitly specified under applicable California privacy regulations.
 
-## Children’s Privacy
+## Children's Privacy
 
 Atar Growth does not allow advertisements to be targeted at individuals under the age of 16.
 
